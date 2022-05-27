@@ -1,11 +1,18 @@
 ﻿// Step 5: Call the method
 List<Insult> insults = GetInsults();
 
-// TODO Step 4: Iterate through the insults in the list and print each one to the console (will probably be changing this to do something different)
-foreach (Insult oneInsult in insults)
-{
-    Console.WriteLine(oneInsult.InsultText);
-}
+
+// Step 4: Get a random integer between 0 and 8 (there are 8 possible insults)
+ int randomInt = new Random().Next(0,8);
+Console.WriteLine(randomInt);
+
+/*
+// TODO old step 4 - delete when done: Iterate through the insults in the list and print each one to the console (will probably be changing this to do something different)
+// foreach (Insult oneInsult in insults)
+// {
+//     Console.WriteLine(oneInsult.InsultText);
+// }
+*/
 
 // Step 2: Create a method to return a list (insults)
 List<Insult> GetInsults()
