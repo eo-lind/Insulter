@@ -1,10 +1,17 @@
-﻿// Step 5: Call the method
+﻿// TODO: Step 7: Call the method
 List<Insult> insults = GetInsults();
 
 
 // Step 4: Get a random integer between 0 and 8 (there are 8 possible insults)
  int randomInt = new Random().Next(0,8);
-Console.WriteLine(randomInt);
+
+// TODO: Step 6: Get an index # to pick a random insult and make sure you don't end up with duplicate numbers
+
+
+
+// TODO: Step 5: Use randomInt as an index to return a random insult
+Console.WriteLine($"{insults[randomInt].InsultText}");
+
 
 /*
 // TODO old step 4 - delete when done: Iterate through the insults in the list and print each one to the console (will probably be changing this to do something different)
