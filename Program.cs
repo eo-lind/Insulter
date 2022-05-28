@@ -1,25 +1,24 @@
-﻿// TODO: Step 7: Call the method
+﻿// Step 7: Call the method
 List<Insult> insults = GetInsults();
 
 
-// Step 4: Get a random integer between 0 and 8 (there are 8 possible insults)
- int randomInt = new Random().Next(0,8);
+// Step 4 - VARIABLES: Get three random integers between 0 and 7 and assign to variables
+int randomInt1 = new Random().Next(0, 7);
+int randomInt2 = new Random().Next(0, 7);
+int randomInt3 = new Random().Next(0, 7);
 
-// TODO: Step 6: Get an index # to pick a random insult and make sure you don't end up with duplicate numbers
+// Step 5 - METHOD: Regnerate random integer variables as long as any of the three are duplicates of each other
+do
+{
+    randomInt1 = new Random().Next(0, 7);
+    randomInt2 = new Random().Next(0, 7);
+    randomInt3 = new Random().Next(0, 7);
+} while ((randomInt1 == randomInt2) || (randomInt2 == randomInt3) || (randomInt1 == randomInt3));
 
-
-
-// TODO: Step 5: Use randomInt as an index to return a random insult
-Console.WriteLine($"{insults[randomInt].InsultText}");
-
-
-/*
-// TODO old step 4 - delete when done: Iterate through the insults in the list and print each one to the console (will probably be changing this to do something different)
-// foreach (Insult oneInsult in insults)
-// {
-//     Console.WriteLine(oneInsult.InsultText);
-// }
-*/
+// Step 6 - METHOD: Print the three strings
+    Console.WriteLine($"{insults[randomInt1].InsultText}");
+    Console.WriteLine($"{insults[randomInt2].InsultText}");
+    Console.WriteLine($"{insults[randomInt3].InsultText}");
 
 // Step 2: Create a method to return a list (insults)
 List<Insult> GetInsults()
